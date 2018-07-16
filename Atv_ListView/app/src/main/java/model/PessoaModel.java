@@ -9,7 +9,23 @@ public class PessoaModel {
     private String estadoCivil;
     private byte registroAtivo;
 
-    public void setCodigo(Integer codigo) {
+    public  PessoaModel(String nome, String endereco, String sexo, String dataNascimento, String estadoCivil, byte registroAtivo){
+        setRegistroAtivo(registroAtivo);
+        setEstadoCivil(estadoCivil);
+        setDataNascimento(dataNascimento);
+        setEndereco(endereco);
+        setNome(nome);
+        setSexo(sexo);
+    }
+
+    public PessoaModel(){
+
+    }
+    public  PessoaModel(Integer codigo, String nome, String endereco, String sexo, String dataNascimento, String estadoCivil, byte registroAtivo) {
+        this(nome, endereco, sexo, dataNascimento, estadoCivil, registroAtivo);
+        setCodigo(codigo);
+    }
+        public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
 

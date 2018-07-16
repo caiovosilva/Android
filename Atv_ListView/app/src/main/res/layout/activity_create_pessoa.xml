@@ -7,13 +7,14 @@
     tools:context=".create_pessoa">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCadastrar"
         android:layout_width="347dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="43dp"
-        android:text="Button" />
+        android:onClick="btnCadastar_OnClick"
+        android:text="CADASTRAR" />
 
     <EditText
         android:id="@+id/txtNome"
@@ -27,13 +28,57 @@
         android:text="Nome" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/txtRegistroAtivo"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="116dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Registro Ativo" />
+
+    <EditText
+        android:id="@+id/txtEstadoCivil"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="180dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Estado Civil" />
+
+    <EditText
+        android:id="@+id/txtDataNascimento"
         android:layout_width="357dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="221dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:inputType="text"
+        android:text="Data de Nascimento" />
+
+    <EditText
+        android:id="@+id/txtSexo"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="156dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Sexo" />
+
+    <EditText
+        android:id="@+id/txtEndereco"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:text="Endereço" />
 </RelativeLayout>

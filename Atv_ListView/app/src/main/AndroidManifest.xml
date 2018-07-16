@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".create_pessoa"></activity>
+        <activity android:name=".create_pessoa" />
+        <activity android:name=".ListarPessoas"></activity>
     </application>
 
 </manifest>

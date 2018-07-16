@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import Util.DatabaseUtil;
@@ -59,7 +60,37 @@ public class PessoaRepository {
         return pessoaModel;
     }
 
-    /*public List<PessoaModel> selecionarPessoas(){
+    public List<PessoaModel> selecionarPessoas(){
+        List<PessoaModel> pessoas = new ArrayList<PessoaModel>();
 
-    }*/
+        StringBuilder stringBuilderQuery = new StringBuilder();
+        stringBuilderQuery.append("SELECT id_pessoa, ");
+        stringBuilderQuery.append("ds_nome, ");
+        stringBuilderQuery.append("ds_endereco, ");
+        stringBuilderQuery.append("fl_sexo, ");
+        stringBuilderQuery.append("dt_nascimento, ");
+        stringBuilderQuery.append("fl_estadoCivil, ");
+        stringBuilderQuery.append("fl_ativo, ");
+        stringBuilderQuery.append("FROM tb_pessoa, ");
+        stringBuilderQuery.append("ORDER BY ds_nome, ");
+
+        Cursor cursor = databaseUtil.getConexaoDataBase().rawQuery(stringBuilderQuery.toString(), null);
+        cursor.moveToFirst();
+
+        PessoaModel pessoaModel;
+        while (!cursor.isAfterLast()){
+            pessoaModel = new PessoaModel(
+                    cursor.getInt(cursor.getColumnIndex("id_pessoa")),
+                    cursor.getString(cursor.getColumnIndex("ds_nome")),
+                    cursor.getString(cursor.getColumnIndex("ds_endereco")),
+                    cursor.getString(cursor.getColumnIndex("fl_sexo")),
+                    cursor.getString(cursor.getColumnIndex("dt_nascimento")),
+                    cursor.getString(cursor.getColumnIndex("fl_estadoCivil")),
+                    (byte)cursor.getShort(cursor.getColumnIndex("fl_ativo"))
+            );
+            pessoas.add(pessoaModel);
+            cursor.moveToNext();
+        }
+        return pessoas;
+    }
 }
