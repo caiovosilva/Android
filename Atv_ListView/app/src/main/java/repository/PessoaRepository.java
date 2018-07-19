@@ -60,7 +60,7 @@ public class PessoaRepository {
         return pessoaModel;
     }
 
-    public List<PessoaModel> selecionarPessoas(){
+    public List<PessoaModel> listarPessoas(){
         List<PessoaModel> pessoas = new ArrayList<PessoaModel>();
 
         StringBuilder stringBuilderQuery = new StringBuilder();

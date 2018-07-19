@@ -25,29 +25,33 @@
         android:layout_marginTop="18dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nome" />
+        android:hint="Nome" />
 
-    <EditText
-        android:id="@+id/txtRegistroAtivo"
-        android:layout_width="357dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="116dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Registro Ativo" />
 
-    <EditText
-        android:id="@+id/txtEstadoCivil"
-        android:layout_width="357dp"
+    <RadioGroup
+        android:id="@+id/radioGroupSexo"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="180dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Estado Civil" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="162dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonMasculino"
+            android:layout_width="137dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFeminino"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Feminino" />
+    </RadioGroup>
 
     <EditText
         android:id="@+id/txtDataNascimento"
@@ -58,18 +62,8 @@
         android:layout_marginTop="221dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Data de Nascimento" />
+        android:hint="Data de Nascimento" />
 
-    <EditText
-        android:id="@+id/txtSexo"
-        android:layout_width="357dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="156dp"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Sexo" />
 
     <EditText
         android:id="@+id/txtEndereco"
@@ -80,5 +74,24 @@
         android:layout_marginTop="87dp"
         android:ems="10"
         android:inputType="textPostalAddress"
-        android:text="Endereço" />
+        android:hint="Endereço" />
+
+    <Spinner
+        android:id="@+id/spinnerEstadoCivil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="194dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRegistroAtivo"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btnCadastrar"
+        android:layout_marginBottom="134dp"
+        android:checked="false"
+        android:text="Registro Ativo" />
+
 </RelativeLayout>

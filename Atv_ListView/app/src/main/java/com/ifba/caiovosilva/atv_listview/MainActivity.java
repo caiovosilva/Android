@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
                     Intent createPessoaActivity = new Intent(MainActivity.this, create_pessoa.class);
                     startActivity(createPessoaActivity);
                 }
+                else if(posicaoDaLinha == 1) {
+                    Intent createPessoaActivity = new Intent(MainActivity.this, ListarPessoas.class);
+                    startActivity(createPessoaActivity);
+                }
             }
         });
     }

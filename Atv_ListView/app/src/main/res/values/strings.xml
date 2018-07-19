@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Atv_ListView</string>
+    	<string name="app_name">Atv_ListView</string>
+	<string name="salvar">Salvar</string>
+	<string name="voltar">Voltar</string>
+	<string name="nome_obrigatorio">O nome eh de preenchimento obrigatorio!</string>
+	<string name="endereco_obrigatorio">O endereco eh de preenchimento obrigatorio!
+		</string>
+	<string name="sexo_obrigatorio">O sexo eh de preenchimento obrigatorio!</string>
+	<string name="data_nascimento_obrigatorio">A data de nascimento eh de preenchimento
+		obrigatorio!</string>
+	<string name="registro_salvo_sucesso">Registro salvo com sucesso!</string>
 </resources>

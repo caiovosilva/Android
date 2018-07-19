@@ -19,7 +19,6 @@ public class PessoaModel {
     }
 
     public PessoaModel(){
-
     }
     public  PessoaModel(Integer codigo, String nome, String endereco, String sexo, String dataNascimento, String estadoCivil, byte registroAtivo) {
         this(nome, endereco, sexo, dataNascimento, estadoCivil, registroAtivo);
@@ -29,6 +28,10 @@ public class PessoaModel {
         this.codigo = codigo;
     }
 
+    @Override
+    public String toString(){
+        return nome;
+    }
     public void setNome(String nome) {
         this.nome = nome;
     }
