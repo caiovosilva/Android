@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1022057166078",
+    "firebase_url": "https://atvlistviewcadastrousuarios.firebaseio.com",
+    "project_id": "atvlistviewcadastrousuarios",
+    "storage_bucket": "atvlistviewcadastrousuarios.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022057166078:android:a10f04e0598f44a4",
+        "android_client_info": {
+          "package_name": "com.ifba.caiovosilva.atv_listview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1022057166078-2t9j2cnsjgf5ufkapgtdjv8g37hi367i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ifba.caiovosilva.atv_listview",
+            "certificate_hash": "b6588cd0dab418e6997b2e74e3245c4fbe840422"
+          }
+        },
+        {
+          "client_id": "1022057166078-tfn35kc6glfkr9tt1tkks9lqbo7icuf5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATK-Jk8p1ot8EekIx0YctJ0ioNPTqZc9I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1022057166078-tfn35kc6glfkr9tt1tkks9lqbo7icuf5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
