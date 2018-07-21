@@ -14,6 +14,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -57,7 +60,7 @@ public class create_pessoa extends AppCompatActivity {
             editTextNome.requestFocus();
         }
         else if(editTextEndereco.getText().toString().trim().equals("")){
-            Uteis.Alert(this,this.getString(R.string.nome_obrigatorio));
+            Uteis.Alert(this,this.getString(R.string.endereco_obrigatorio));
             editTextEndereco.requestFocus();
         }
         else if(!radioButtonMasculino.isChecked() && !radioButtonFeminino.isChecked()){
@@ -84,7 +87,11 @@ public class create_pessoa extends AppCompatActivity {
             else
                 pessoa.setRegistroAtivo((byte)0);
 
-            new PessoaRepository(this).Salvar(pessoa);
+            //new PessoaRepository(this).Salvar(pessoa);
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference myRef = database.getReference();
+
+            myRef.setValue(pessoa);
             Uteis.Alert(this,this.getString(R.string.registro_salvo_sucesso));
             limparCampos();
         }
